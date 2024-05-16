@@ -63,7 +63,7 @@ class Markdown extends Element/*<MarkdownAttributes>*/ {
 }
 
 
-open class TextAttributes extends InputAttributes{
+open class TextAttributes extends InputAttributes {
   ///  A semi-opaque placeholder that renders in the text [input] when empty.
   placeholder: String | Null
   /// Text that is pre-filled in the text [input].
