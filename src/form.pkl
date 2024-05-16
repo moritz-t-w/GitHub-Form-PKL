@@ -37,13 +37,13 @@ abstract class Element {
   validations: Class
 }
 
-abstract class Input extends Element {
 open class InputAttributes {
   /// A brief description of the expected user input, which is also displayed in the form.
   label: String(!isEmpty)
   /// A description of the text area to provide context or guidance, which is displayed in the form.
   description: String
 }
+abstract class Input extends Element {
   type: InputType
   /// The identifier for the elemkent[...]. Can only use alpha-numeric characters, -, and _.
   /// Must be unique in the form definition.
