@@ -56,12 +56,15 @@ class Markdown extends Element/*<MarkdownAttributes>*/ {
 }
 
 
-open class TextAttributes {
+open class InputAttributes {
   /// A brief description of the expected user input, which is also displayed in the form.
   label: String(!isEmpty)
   /// A description of the text area to provide context or guidance, which is displayed in the form.
   description: String
-  ///  A semi-opaque placeholder that renders in the text area when empty.
+}
+
+open class TextAttributes extends InputAttributes{
+  ///  A semi-opaque placeholder that renders in the text [input] when empty.
   placeholder: String
   /// Text that is pre-filled in the text area.
   value: String
