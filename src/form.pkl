@@ -56,7 +56,7 @@ class Markdown extends Element/*<MarkdownAttributes>*/ {
 }
 
 
-abstract class TextAttributes {
+open class TextAttributes {
   /// A brief description of the expected user input, which is also displayed in the form.
   label: String(!isEmpty)
   /// A description of the text area to provide context or guidance, which is displayed in the form.
@@ -88,4 +88,9 @@ class MultiLineTextAttributes extends TextAttributes {
 class MultiLineText extends Text {
   type = "textarea"
   attributes: MultiLineTextAttributes
+}
+
+/// Single-line text field.
+class SingleLineText extends Text {
+  type = "input"
 }
