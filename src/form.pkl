@@ -69,7 +69,7 @@ open class TextAttributes extends InputAttributes{
   /// Text that is pre-filled in the text [input].
   value: String | Null
 }
-class Validations {
+open class Validations {
   /// Prevents form submission until element is completed. Only for public repositories.
   required: Boolean | Null
 }
@@ -111,4 +111,19 @@ class DropDownAttributes extends InputAttributes {
 class DropDown extends Input {
   type = "dropdown"
   attributes: DropDownAttributes
+}
+
+class CheckBoxAttributes extends Validations {
+  /// The identifier for the option, which is displayed in the form.
+  /// Markdown is supported for bold or italic text formatting, and hyperlinks.
+  label: String(!isEmpty)
+}
+/// A set of Checkboxes
+class CheckBoxesAttributes extends InputAttributes {
+  /// An array of checkboxes that the user can select.
+  options: List<CheckBoxAttributes> | Null
+}
+class CheckBoxes extends Input {
+  type: "checkboxes"
+  attributes: CheckBoxesAttributes
 }
