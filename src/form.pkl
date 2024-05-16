@@ -1,0 +1,7 @@
+/// You can use GitHub's form schema to configure forms for supported features.
+///
+/// This implementation is based on the GitHub documentation page
+/// ["Syntax for GitHub's form schema"](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema)
+/// and contains a lot of the same documentation.
+module com.github.form
+
