@@ -38,11 +38,18 @@ abstract class Element {
 }
 
 abstract class Input extends Element {
+open class InputAttributes {
+  /// A brief description of the expected user input, which is also displayed in the form.
+  label: String(!isEmpty)
+  /// A description of the text area to provide context or guidance, which is displayed in the form.
+  description: String
+}
   type: InputType
   /// The identifier for the elemkent[...]. Can only use alpha-numeric characters, -, and _.
   /// Must be unique in the form definition.
   /// If provided, the id is the canonical identifier for the field in URL query parameter prefills.
   id: String(matches(Regex("^[a-zA-Z0-9-_]+$")))
+  attributes: InputAttributes
 }
 
 class MarkdownAttributes {
@@ -55,13 +62,6 @@ class Markdown extends Element/*<MarkdownAttributes>*/ {
   attributes: MarkdownAttributes
 }
 
-
-open class InputAttributes {
-  /// A brief description of the expected user input, which is also displayed in the form.
-  label: String(!isEmpty)
-  /// A description of the text area to provide context or guidance, which is displayed in the form.
-  description: String
-}
 
 open class TextAttributes extends InputAttributes{
   ///  A semi-opaque placeholder that renders in the text [input] when empty.
