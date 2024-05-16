@@ -7,6 +7,9 @@ module com.github.form
 
 import "linguist.pkl"
 
+/// A set of elements for requesting user input.
+typealias Form = List<Element>
+
 /// Each type has unique attributes and validations.
 /// /// | Type | Description |
 /// | ---- | ----------- |
