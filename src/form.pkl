@@ -34,3 +34,11 @@ abstract class Element {
   /// A set of key-value pairs that set constraints on the element.
   validations: Map<String, String>
 }
+
+abstract class Input extends Element {
+  type: InputType
+  /// The identifier for the elemkent[...]. Can only use alpha-numeric characters, -, and _.
+  /// Must be unique in the form definition.
+  /// If provided, the id is the canonical identifier for the field in URL query parameter prefills.
+  id: String(matches(Regex("^[a-zA-Z0-9-_]+$")))
+}
