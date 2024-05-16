@@ -81,7 +81,7 @@ class MultiLineTextAttributes extends TextAttributes {
   /// If a value is provided, submitted text will be formatted into a codeblock.
   /// When this [property] is provided, the text area will not expand for file attachments
   /// or Markdown editing.
-  render: linguist.Language // should be imported from linguist.pkl
+  render: linguist.Language
 }
 
 /// Multi-line text field. Contributors can also attach files [...].
