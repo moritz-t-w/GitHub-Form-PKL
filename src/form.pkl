@@ -28,7 +28,7 @@ typealias ElementType = "markdown" | InputType
 /// A set of key-value pairs that determine the type of the element, the properties of the element,
 /// and the constraints you want to apply to the element.
 /// For some keys, the value is another set of key-value pairs.
-abstract class Element {
+abstract class Element/*<Attributes>*/ {
   /// The type of element that you want to define.
   type: ElementType
   /// A set of key-value pairs that define the properties of the element.
@@ -41,21 +41,21 @@ open class InputAttributes {
   /// A description of the text area to provide context or guidance, which is displayed in the form.
   description: String | Null
 }
-abstract class Input extends Element {
 open class Validations {
   /// Prevents form submission until element is completed. Only for public repositories.
   required: Boolean | Null
 }
+abstract class Input/*<Attributes extends InputAttributes, Validations extends Validations>*/ extends Element/*<Attributes>*/ {
   type: InputType
   /// The identifier for the elemkent[...]. Can only use alpha-numeric characters, -, and _.
   /// Must be unique in the form definition.
   /// If provided, the id is the canonical identifier for the field in URL query parameter prefills.
   id: String(matches(Regex("^[a-zA-Z0-9-_]+$"))) | Null
   attributes: InputAttributes
-  validations: Validations | Null
+  validations/*: Validations //*/: Validations | Null
 }
 
-class MarkdownAttributes {
+class MarkdownAttributes/*<MarkdownAttributes>*/ {
   /// The text that is rendered. Markdown formatting is supported.
   value: String(!isEmpty)
 }
@@ -73,7 +73,7 @@ open class TextAttributes extends InputAttributes {
   value: String | Null
 }
 /// Text field
-abstract class Text extends Input {
+abstract class Text/*<Attributes extends TextAttributes, Validations extends TextValidations>*/ extends Input/*<Attributes, Validations>*/ {
   type: "input" | "textarea"
   attributes: TextAttributes
 }
@@ -85,13 +85,13 @@ class MultiLineTextAttributes extends TextAttributes {
   render: linguist.Language | Null
 }
 /// Multi-line text field. Contributors can also attach files [...].
-class MultiLineText extends Text {
+class MultiLineText extends Text/*<MultiLineTextAttributes>*/ {
   type = "textarea"
   attributes: MultiLineTextAttributes
 }
 
 /// Single-line text field.
-class SingleLineText extends Text {
+class SingleLineText extends Text/*<SingleLineTextAttributes>*/ {
   type = "input"
 }
 
@@ -106,7 +106,7 @@ class DropDownAttributes extends InputAttributes {
   default: UInt(isBetween(0, options.length)) | Null
 }
 /// Dropdown menu
-class DropDown extends Input {
+class DropDown extends Input/*<DropDownAttributes>*/ {
   type = "dropdown"
   attributes: DropDownAttributes
 }
@@ -121,7 +121,7 @@ class CheckBoxesAttributes extends InputAttributes {
   /// An array of checkboxes that the user can select.
   options: List<CheckBoxAttributes> | Null
 }
-class CheckBoxes extends Input {
+class CheckBoxes extends Input/*<CheckBoxesAttributes>*/ {
   type: "checkboxes"
   attributes: CheckBoxesAttributes
 }
