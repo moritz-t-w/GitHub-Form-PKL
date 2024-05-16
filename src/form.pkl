@@ -32,9 +32,9 @@ abstract class Element {
   /// The type of element that you want to define.
   type: ElementType
   /// A set of key-value pairs that define the properties of the element.
-  attributes : Any
+  attributes: Class
   /// A set of key-value pairs that set constraints on the element.
-  validations: Map<String, String>
+  validations: Class
 }
 
 abstract class Input extends Element {
