@@ -49,9 +49,8 @@ class MarkdownAttributes {
   /// The text that is rendered. Markdown formatting is supported.
   value: String(!isEmpty)
 }
-/// You can use a markdown element to display Markdown in your form that provides extra context
-/// to the user, but is not submitted.
-class Markdown extends Element {
+/// Display Markdown [...] that provides extra context to the user, but is not submitted.
+class Markdown extends Element/*<MarkdownAttributes>*/ {
   type = "markdown"
   attributes: MarkdownAttributes
 }
@@ -77,9 +76,7 @@ class TextAreaValidations {
   required: Boolean
 }
 
-/// You can use a textarea element to add a multi-line text field to your form.
-/// Contributors can also attach files in textarea fields.
-class TextArea extends Input {
+/// Multi-line text field. Contributors can also attach files [...].
   type = "textarea"
   attributes: TextAreaAttributes
   validations = TextAreaValidations
