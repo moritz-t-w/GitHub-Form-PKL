@@ -1,0 +1,1091 @@
+module com.github.linguist
+/// A Language known to GitHub.
+///
+/// Source: [github-linugist/linguist@b7b1bbc](https://github.com/github-linguist/linguist/blob/4a807b475da9715fb20c5bbed34d0e2d97879e3a/lib/linguist/languages.yml)
+typealias Language =
+  "1C Enterprise" |
+  "2-Dimensional Array" |
+  "4D" |
+  "ABAP" |
+  "ABAP CDS" |
+  "ABNF" |
+  "AFDKO" |
+  "AGS Script" |
+  "AIDL" |
+  "AL" |
+  "AMPL" |
+  "ANTLR" |
+  "API Blueprint" |
+  "APL" |
+  "ASL" |
+  "ASN.1" |
+  "ASP.NET" |
+  "ATS" |
+  "ActionScript" |
+  "Ada" |
+  "Adblock Filter List" |
+  "Adobe Font Metrics" |
+  "Agda" |
+  "Alloy" |
+  "Alpine Abuild" |
+  "Altium Designer" |
+  "AngelScript" |
+  "Ant Build System" |
+  "Antlers" |
+  "ApacheConf" |
+  "Apex" |
+  "Apollo Guidance Computer" |
+  "AppleScript" |
+  "Arc" |
+  "AsciiDoc" |
+  "AspectJ" |
+  "Assembly" |
+  "Astro" |
+  "Asymptote" |
+  "Augeas" |
+  "AutoHotkey" |
+  "AutoIt" |
+  "AutoIt3" |
+  "AutoItScript" |
+  "Avro IDL" |
+  "Awk" |
+  "BASIC" |
+  "Ballerina" |
+  "Batchfile" |
+  "Beef" |
+  "Befunge" |
+  "Berry" |
+  "BibTeX" |
+  "Bicep" |
+  "Bikeshed" |
+  "Bison" |
+  "BitBake" |
+  "Blade" |
+  "BlitzBasic" |
+  "BlitzMax" |
+  "Bluespec" |
+  "Bluespec BH" |
+  "Boo" |
+  "Boogie" |
+  "Brainfuck" |
+  "BrighterScript" |
+  "Brightscript" |
+  "Browserslist" |
+  "C" |
+  "C#" |
+  "C++" |
+  "C-ObjDump" |
+  "C2hs Haskell" |
+  "CAP CDS" |
+  "CIL" |
+  "CLIPS" |
+  "CMake" |
+  "COBOL" |
+  "CODEOWNERS" |
+  "COLLADA" |
+  "CSON" |
+  "CSS" |
+  "CSV" |
+  "CUE" |
+  "CWeb" |
+  "Cabal" |
+  "Cabal Config" |
+  "Cadence" |
+  "Cairo" |
+  "CameLIGO" |
+  "Cap'n Proto" |
+  "Carto" |
+  "CartoCSS" |
+  "Ceylon" |
+  "Chapel" |
+  "Charity" |
+  "Checksums" |
+  "ChucK" |
+  "Circom" |
+  "Cirru" |
+  "Clarion" |
+  "Clarity" |
+  "Classic ASP" |
+  "Clean" |
+  "Click" |
+  "Clojure" |
+  "Closure Templates" |
+  "Cloud Firestore Security Rules" |
+  "CoNLL" |
+  "CoNLL-U" |
+  "CoNLL-X" |
+  "CodeQL" |
+  "CoffeeScript" |
+  "ColdFusion" |
+  "ColdFusion CFC" |
+  "Common Lisp" |
+  "Common Workflow Language" |
+  "Component Pascal" |
+  "Containerfile" |
+  "Cool" |
+  "Coq" |
+  "Cpp-ObjDump" |
+  "Creole" |
+  "Crystal" |
+  "Csound" |
+  "Csound Document" |
+  "Csound Score" |
+  "Cuda" |
+  "Cue Sheet" |
+  "Curry" |
+  "Cycript" |
+  "Cypher" |
+  "Cython" |
+  "D" |
+  "D-ObjDump" |
+  "D2" |
+  "DIGITAL Command Language" |
+  "DM" |
+  "DNS Zone" |
+  "DTrace" |
+  "Dafny" |
+  "Darcs Patch" |
+  "Dart" |
+  "DataWeave" |
+  "Debian Package Control File" |
+  "DenizenScript" |
+  "Dhall" |
+  "Diff" |
+  "DirectX 3D File" |
+  "Dlang" |
+  "Dockerfile" |
+  "Dogescript" |
+  "Dotenv" |
+  "Dylan" |
+  "E" |
+  "E-mail" |
+  "EBNF" |
+  "ECL" |
+  "ECLiPSe" |
+  "EJS" |
+  "EQ" |
+  "Eagle" |
+  "Earthfile" |
+  "Earthly" |
+  "Easybuild" |
+  "Ecere Projects" |
+  "Ecmarkup" |
+  "Edge" |
+  "EdgeQL" |
+  "EditorConfig" |
+  "Edje Data Collection" |
+  "Eiffel" |
+  "Elixir" |
+  "Elm" |
+  "Elvish" |
+  "Elvish Transcript" |
+  "Emacs Lisp" |
+  "EmberScript" |
+  "Erlang" |
+  "Euphoria" |
+  "F#" |
+  "F*" |
+  "FIGfont" |
+  "FIGlet Font" |
+  "FLUX" |
+  "Factor" |
+  "Fancy" |
+  "Fantom" |
+  "Faust" |
+  "Fennel" |
+  "Filebench WML" |
+  "Filterscript" |
+  "Fluent" |
+  "Formatted" |
+  "Forth" |
+  "Fortran" |
+  "Fortran Free Form" |
+  "FreeBasic" |
+  "FreeMarker" |
+  "Frege" |
+  "Futhark" |
+  "G-code" |
+  "GAML" |
+  "GAMS" |
+  "GAP" |
+  "GCC Machine Description" |
+  "GDB" |
+  "GDScript" |
+  "GEDCOM" |
+  "GLSL" |
+  "GN" |
+  "GSC" |
+  "Game Maker Language" |
+  "Gemfile.lock" |
+  "Gemini" |
+  "Genero 4gl" |
+  "Genero per" |
+  "Genie" |
+  "Genshi" |
+  "Gentoo Ebuild" |
+  "Gentoo Eclass" |
+  "Gerber Image" |
+  "Gettext Catalog" |
+  "Gherkin" |
+  "Git Attributes" |
+  "Git Blame Ignore Revs" |
+  "Git Config" |
+  "Git Revision List" |
+  "Gleam" |
+  "Glimmer JS" |
+  "Glimmer TS" |
+  "Glyph" |
+  "Glyph Bitmap Distribution Format" |
+  "Gnuplot" |
+  "Go" |
+  "Go Checksums" |
+  "Go Module" |
+  "Go Workspace" |
+  "Godot Resource" |
+  "Golo" |
+  "Gosu" |
+  "Grace" |
+  "Gradle" |
+  "Gradle Kotlin DSL" |
+  "Grammatical Framework" |
+  "Graph Modeling Language" |
+  "GraphQL" |
+  "Graphviz (DOT)" |
+  "Groovy" |
+  "Groovy Server Pages" |
+  "HAProxy" |
+  "HCL" |
+  "HLSL" |
+  "HOCON" |
+  "HTML" |
+  "HTML+ECR" |
+  "HTML+EEX" |
+  "HTML+ERB" |
+  "HTML+PHP" |
+  "HTML+Razor" |
+  "HTTP" |
+  "HXML" |
+  "Hack" |
+  "Haml" |
+  "Handlebars" |
+  "Harbour" |
+  "HashiCorp Configuration Language" |
+  "Haskell" |
+  "Haxe" |
+  "HiveQL" |
+  "HolyC" |
+  "Hosts File" |
+  "Hy" |
+  "HyPhy" |
+  "IDL" |
+  "IGOR Pro" |
+  "INI" |
+  "IPython Notebook" |
+  "IRC log" |
+  "Idris" |
+  "Ignore List" |
+  "ImageJ Macro" |
+  "Imba" |
+  "Inform 7" |
+  "Ink" |
+  "Inno Setup" |
+  "Io" |
+  "Ioke" |
+  "Isabelle" |
+  "Isabelle ROOT" |
+  "J" |
+  "JAR Manifest" |
+  "JCL" |
+  "JFlex" |
+  "JSON" |
+  "JSON with Comments" |
+  "JSON5" |
+  "JSONLD" |
+  "JSONiq" |
+  "Janet" |
+  "Jasmin" |
+  "Java" |
+  "Java Properties" |
+  "Java Server Pages" |
+  "JavaScript" |
+  "JavaScript+ERB" |
+  "Jest Snapshot" |
+  "JetBrains MPS" |
+  "Jinja" |
+  "Jison" |
+  "Jison Lex" |
+  "Jolie" |
+  "Jsonnet" |
+  "Julia" |
+  "Jupyter Notebook" |
+  "Just" |
+  "Justfile" |
+  "KRL" |
+  "Kaitai Struct" |
+  "KakouneScript" |
+  "KerboScript" |
+  "KiCad Layout" |
+  "KiCad Legacy Layout" |
+  "KiCad Schematic" |
+  "Kickstart" |
+  "Kit" |
+  "Kotlin" |
+  "Kusto" |
+  "LFE" |
+  "LLVM" |
+  "LOLCODE" |
+  "LSL" |
+  "LTspice Symbol" |
+  "LabVIEW" |
+  "Lark" |
+  "Lasso" |
+  "Latte" |
+  "Lean" |
+  "Lean 4" |
+  "Less" |
+  "Lex" |
+  "LigoLANG" |
+  "LilyPond" |
+  "Limbo" |
+  "Linker Script" |
+  "Linux Kernel Module" |
+  "Liquid" |
+  "Literate Agda" |
+  "Literate CoffeeScript" |
+  "Literate Haskell" |
+  "LiveScript" |
+  "Logos" |
+  "Logtalk" |
+  "LookML" |
+  "LoomScript" |
+  "Lua" |
+  "M" |
+  "M4" |
+  "M4Sugar" |
+  "MATLAB" |
+  "MAXScript" |
+  "MDX" |
+  "MLIR" |
+  "MQL4" |
+  "MQL5" |
+  "MTML" |
+  "MUF" |
+  "Macaulay2" |
+  "Makefile" |
+  "Mako" |
+  "Markdown" |
+  "Marko" |
+  "Mask" |
+  "Mathematica" |
+  "Maven POM" |
+  "Max" |
+  "Mercury" |
+  "Mermaid" |
+  "Meson" |
+  "Metal" |
+  "Microsoft Developer Studio Project" |
+  "Microsoft Visual Studio Solution" |
+  "MiniD" |
+  "MiniYAML" |
+  "Mint" |
+  "Mirah" |
+  "Modelica" |
+  "Modula-2" |
+  "Modula-3" |
+  "Module Management System" |
+  "Mojo" |
+  "Monkey" |
+  "Monkey C" |
+  "Moocode" |
+  "MoonScript" |
+  "Motoko" |
+  "Motorola 68K Assembly" |
+  "Move" |
+  "Muse" |
+  "Mustache" |
+  "Myghty" |
+  "NASL" |
+  "NCL" |
+  "NEON" |
+  "NL" |
+  "NPM Config" |
+  "NSIS" |
+  "NWScript" |
+  "Nasal" |
+  "Nearley" |
+  "Nemerle" |
+  "NeoSnippet" |
+  "NetLinx" |
+  "NetLinx+ERB" |
+  "NetLogo" |
+  "NewLisp" |
+  "Nextflow" |
+  "Nginx" |
+  "Nim" |
+  "Ninja" |
+  "Nit" |
+  "Nix" |
+  "Nu" |
+  "NumPy" |
+  "Nunjucks" |
+  "Nushell" |
+  "OASv2-json" |
+  "OASv2-yaml" |
+  "OASv3-json" |
+  "OASv3-yaml" |
+  "OCaml" |
+  "Oberon" |
+  "ObjDump" |
+  "Object Data Instance Notation" |
+  "ObjectScript" |
+  "Objective-C" |
+  "Objective-C++" |
+  "Objective-J" |
+  "Odin" |
+  "Omgrofl" |
+  "Opa" |
+  "Opal" |
+  "Open Policy Agent" |
+  "OpenAPI Specification v2" |
+  "OpenAPI Specification v3" |
+  "OpenCL" |
+  "OpenEdge ABL" |
+  "OpenQASM" |
+  "OpenRC runscript" |
+  "OpenSCAD" |
+  "OpenStep Property List" |
+  "OpenType Feature File" |
+  "Option List" |
+  "Org" |
+  "Ox" |
+  "Oxygene" |
+  "Oz" |
+  "P4" |
+  "PDDL" |
+  "PEG.js" |
+  "PHP" |
+  "PLSQL" |
+  "PLpgSQL" |
+  "POV-Ray SDL" |
+  "Pact" |
+  "Pan" |
+  "Papyrus" |
+  "Parrot" |
+  "Parrot Assembly" |
+  "Parrot Internal Representation" |
+  "Pascal" |
+  "Pawn" |
+  "Pep8" |
+  "Perl" |
+  "Pic" |
+  "Pickle" |
+  "PicoLisp" |
+  "PigLatin" |
+  "Pike" |
+  "Pip Requirements" |
+  "PlantUML" |
+  "Pod" |
+  "Pod 6" |
+  "PogoScript" |
+  "Polar" |
+  "Pony" |
+  "Portugol" |
+  "PostCSS" |
+  "PostScript" |
+  "PowerBuilder" |
+  "PowerShell" |
+  "Praat" |
+  "Prisma" |
+  "Processing" |
+  "Procfile" |
+  "Proguard" |
+  "Prolog" |
+  "Promela" |
+  "Propeller Spin" |
+  "Protocol Buffer" |
+  "Protocol Buffer Text Format" |
+  "Protocol Buffers" |
+  "Public Key" |
+  "Pug" |
+  "Puppet" |
+  "Pure Data" |
+  "PureBasic" |
+  "PureScript" |
+  "Pyret" |
+  "Python" |
+  "Python console" |
+  "Python traceback" |
+  "Q#" |
+  "QML" |
+  "QMake" |
+  "Qt Script" |
+  "Quake" |
+  "R" |
+  "RAML" |
+  "RBS" |
+  "RDoc" |
+  "REALbasic" |
+  "REXX" |
+  "RMarkdown" |
+  "RPC" |
+  "RPGLE" |
+  "RPM Spec" |
+  "RUNOFF" |
+  "Racket" |
+  "Ragel" |
+  "Raku" |
+  "Rascal" |
+  "Raw token data" |
+  "ReScript" |
+  "Readline Config" |
+  "Reason" |
+  "ReasonLIGO" |
+  "Rebol" |
+  "Record Jar" |
+  "Red" |
+  "Redcode" |
+  "Redirect Rules" |
+  "Regular Expression" |
+  "Ren'Py" |
+  "RenderScript" |
+  "Rez" |
+  "Rich Text Format" |
+  "Ring" |
+  "Riot" |
+  "RobotFramework" |
+  "Roc" |
+  "Roff" |
+  "Roff Manpage" |
+  "Rouge" |
+  "RouterOS Script" |
+  "Rscript" |
+  "Ruby" |
+  "Rust" |
+  "SAS" |
+  "SCSS" |
+  "SELinux Kernel Policy Language" |
+  "SELinux Policy" |
+  "SMT" |
+  "SPARQL" |
+  "SQF" |
+  "SQL" |
+  "SQLPL" |
+  "SRecode Template" |
+  "SSH Config" |
+  "STAR" |
+  "STL" |
+  "STON" |
+  "SVG" |
+  "SWIG" |
+  "Sage" |
+  "SaltStack" |
+  "Sass" |
+  "Scala" |
+  "Scaml" |
+  "Scenic" |
+  "Scheme" |
+  "Scilab" |
+  "Self" |
+  "ShaderLab" |
+  "Shell" |
+  "ShellCheck Config" |
+  "ShellSession" |
+  "Shen" |
+  "Sieve" |
+  "Simple File Verification" |
+  "Singularity" |
+  "Slash" |
+  "Slice" |
+  "Slim" |
+  "Slint" |
+  "SmPL" |
+  "Smali" |
+  "Smalltalk" |
+  "Smarty" |
+  "Smithy" |
+  "Snakemake" |
+  "SnipMate" |
+  "Solidity" |
+  "Soong" |
+  "SourcePawn" |
+  "Spline Font Database" |
+  "Squirrel" |
+  "Stan" |
+  "Standard ML" |
+  "Starlark" |
+  "Stata" |
+  "StringTemplate" |
+  "Stylus" |
+  "SubRip Text" |
+  "SugarSS" |
+  "SuperCollider" |
+  "Svelte" |
+  "Sway" |
+  "Sweave" |
+  "Swift" |
+  "SystemVerilog" |
+  "TI Program" |
+  "TL-Verilog" |
+  "TLA" |
+  "TOML" |
+  "TSQL" |
+  "TSV" |
+  "TSX" |
+  "TXL" |
+  "Talon" |
+  "Tcl" |
+  "Tcsh" |
+  "TeX" |
+  "Tea" |
+  "Terra" |
+  "Terraform Template" |
+  "Texinfo" |
+  "Text" |
+  "TextGrid" |
+  "TextMate Properties" |
+  "Textile" |
+  "Thrift" |
+  "Toit" |
+  "Turing" |
+  "Turtle" |
+  "Twig" |
+  "Type Language" |
+  "TypeScript" |
+  "Typst" |
+  "UltiSnip" |
+  "UltiSnips" |
+  "Unified Parallel C" |
+  "Unity3D Asset" |
+  "Unix Assembly" |
+  "Uno" |
+  "UnrealScript" |
+  "Ur" |
+  "Ur/Web" |
+  "UrWeb" |
+  "V" |
+  "VBA" |
+  "VBScript" |
+  "VCL" |
+  "VHDL" |
+  "Vala" |
+  "Valve Data Format" |
+  "Velocity Template Language" |
+  "Verilog" |
+  "Vim Help File" |
+  "Vim Script" |
+  "Vim Snippet" |
+  "Visual Basic .NET" |
+  "Visual Basic 6.0" |
+  "Volt" |
+  "Vue" |
+  "Vyper" |
+  "WDL" |
+  "WGSL" |
+  "Wavefront Material" |
+  "Wavefront Object" |
+  "Web Ontology Language" |
+  "WebAssembly" |
+  "WebAssembly Interface Type" |
+  "WebIDL" |
+  "WebVTT" |
+  "Wget Config" |
+  "Whiley" |
+  "Wikitext" |
+  "Win32 Message File" |
+  "Windows Registry Entries" |
+  "Witcher Script" |
+  "Wollok" |
+  "Workflow Description Language" |
+  "World of Warcraft Addon Data" |
+  "Wren" |
+  "X BitMap" |
+  "X Font Directory Index" |
+  "X PixMap" |
+  "X10" |
+  "XC" |
+  "XCompose" |
+  "XML" |
+  "XML Property List" |
+  "XPages" |
+  "XProc" |
+  "XQuery" |
+  "XS" |
+  "XSLT" |
+  "Xojo" |
+  "Xonsh" |
+  "Xtend" |
+  "YAML" |
+  "YANG" |
+  "YARA" |
+  "YASnippet" |
+  "Yacc" |
+  "Yul" |
+  "ZAP" |
+  "ZIL" |
+  "Zeek" |
+  "ZenScript" |
+  "Zephir" |
+  "Zig" |
+  "Zimpl" |
+  "abl" |
+  "abuild" |
+  "acfm" |
+  "ackrc" |
+  "aconf" |
+  "actionscript 3" |
+  "actionscript3" |
+  "ad block" |
+  "ad block filters" |
+  "ada2005" |
+  "ada95" |
+  "adb" |
+  "adblock" |
+  "adobe composite font metrics" |
+  "adobe multiple font metrics" |
+  "advpl" |
+  "ags" |
+  "ahk" |
+  "altium" |
+  "amfm" |
+  "amusewiki" |
+  "apache" |
+  "apkbuild" |
+  "arexx" |
+  "as3" |
+  "ascii stl" |
+  "asm" |
+  "asp" |
+  "aspx" |
+  "aspx-vb" |
+  "ats2" |
+  "au3" |
+  "autoconf" |
+  "b3d" |
+  "bash" |
+  "bash session" |
+  "bat" |
+  "batch" |
+  "bazel" |
+  "be" |
+  "bh" |
+  "blitz3d" |
+  "blitzplus" |
+  "bluespec bsv" |
+  "bluespec classic" |
+  "bmax" |
+  "bplus" |
+  "bro" |
+  "bsdmake" |
+  "bsv" |
+  "byond" |
+  "bzl" |
+  "c++-objdump" |
+  "c2hs" |
+  "cURL Config" |
+  "cake" |
+  "cakescript" |
+  "cds" |
+  "cfc" |
+  "cfm" |
+  "cfml" |
+  "checksum" |
+  "chpl" |
+  "classic visual basic" |
+  "clipper" |
+  "coccinelle" |
+  "coffee" |
+  "coffee-script" |
+  "coldfusion html" |
+  "console" |
+  "cperl" |
+  "cpp" |
+  "csharp" |
+  "csound-csd" |
+  "csound-orc" |
+  "csound-sco" |
+  "cucumber" |
+  "curlrc" |
+  "cwl" |
+  "d2lang" |
+  "dcl" |
+  "delphi" |
+  "desktop" |
+  "dircolors" |
+  "django" |
+  "dosbatch" |
+  "dosini" |
+  "dpatch" |
+  "dtrace-script" |
+  "eC" |
+  "ecmarkdown" |
+  "ecr" |
+  "editor-config" |
+  "edn" |
+  "eeschema schematic" |
+  "eex" |
+  "elisp" |
+  "emacs" |
+  "emacs muse" |
+  "email" |
+  "eml" |
+  "erb" |
+  "esdl" |
+  "fb" |
+  "fish" |
+  "flex" |
+  "foxpro" |
+  "fsharp" |
+  "fstar" |
+  "ftl" |
+  "fundamental" |
+  "gas" |
+  "gemtext" |
+  "geojson" |
+  "gf" |
+  "git-ignore" |
+  "gitattributes" |
+  "gitconfig" |
+  "gitignore" |
+  "gitmodules" |
+  "gnu asm" |
+  "go mod" |
+  "go sum" |
+  "go work" |
+  "go work sum" |
+  "go.mod" |
+  "go.sum" |
+  "go.work" |
+  "go.work.sum" |
+  "golang" |
+  "groff" |
+  "gsp" |
+  "hash" |
+  "hashes" |
+  "hbs" |
+  "heex" |
+  "help" |
+  "hoon" |
+  "hosts" |
+  "html+django" |
+  "html+jinja" |
+  "html+ruby" |
+  "htmlbars" |
+  "htmldjango" |
+  "hylang" |
+  "i7" |
+  "ignore" |
+  "igor" |
+  "igorpro" |
+  "ijm" |
+  "ile rpg" |
+  "inc" |
+  "inform7" |
+  "inputrc" |
+  "irc" |
+  "irc logs" |
+  "java server page" |
+  "jq" |
+  "jruby" |
+  "js" |
+  "jsonc" |
+  "jsonl" |
+  "jsp" |
+  "kak" |
+  "kakscript" |
+  "keyvalues" |
+  "ksy" |
+  "kvlang" |
+  "lassoscript" |
+  "latex" |
+  "leex" |
+  "less-css" |
+  "lhaskell" |
+  "lhs" |
+  "lisp" |
+  "litcoffee" |
+  "live-script" |
+  "ls" |
+  "m2" |
+  "m68k" |
+  "mIRC Script" |
+  "macruby" |
+  "mail" |
+  "make" |
+  "man" |
+  "man page" |
+  "man-page" |
+  "manpage" |
+  "markojs" |
+  "max/msp" |
+  "maxmsp" |
+  "mbox" |
+  "mcfunction" |
+  "md" |
+  "mdoc" |
+  "mediawiki" |
+  "mermaid example" |
+  "mf" |
+  "mma" |
+  "mps" |
+  "mumps" |
+  "mupad" |
+  "nanorc" |
+  "nasm" |
+  "ne-on" |
+  "nesC" |
+  "nette object notation" |
+  "nginx configuration file" |
+  "nixos" |
+  "njk" |
+  "node" |
+  "npmrc" |
+  "nroff" |
+  "nu-script" |
+  "nush" |
+  "nushell-script" |
+  "nvim" |
+  "oasv2" |
+  "oasv3" |
+  "obj-c" |
+  "obj-c++" |
+  "obj-j" |
+  "objc" |
+  "objc++" |
+  "objectivec" |
+  "objectivec++" |
+  "objectivej" |
+  "objectpascal" |
+  "objj" |
+  "octave" |
+  "odin-lang" |
+  "odinlang" |
+  "oncrpc" |
+  "ooc" |
+  "openedge" |
+  "openrc" |
+  "opts" |
+  "osascript" |
+  "pandoc" |
+  "pasm" |
+  "pcbnew" |
+  "perl-6" |
+  "perl6" |
+  "pikchr" |
+  "pir" |
+  "plain text" |
+  "posh" |
+  "postscr" |
+  "pot" |
+  "pov-ray" |
+  "povray" |
+  "progress" |
+  "proto" |
+  "protobuf" |
+  "protobuf text format" |
+  "pwsh" |
+  "pycon" |
+  "pyrex" |
+  "python3" |
+  "q" |
+  "ql" |
+  "qsharp" |
+  "ragel-rb" |
+  "ragel-ruby" |
+  "rake" |
+  "raw" |
+  "razor" |
+  "rb" |
+  "rbx" |
+  "reStructuredText" |
+  "readline" |
+  "red/system" |
+  "redirects" |
+  "regex" |
+  "regexp" |
+  "renpy" |
+  "rhtml" |
+  "robots" |
+  "robots txt" |
+  "robots.txt" |
+  "rpcgen" |
+  "rs" |
+  "rs-274x" |
+  "rss" |
+  "rst" |
+  "rusthon" |
+  "salt" |
+  "saltstate" |
+  "sarif" |
+  "sdc" |
+  "sed" |
+  "sepolicy" |
+  "sfv" |
+  "sh" |
+  "shell-script" |
+  "shellcheckrc" |
+  "sml" |
+  "snakefile" |
+  "snippet" |
+  "sourcemod" |
+  "soy" |
+  "specfile" |
+  "splus" |
+  "sqlrpgle" |
+  "squeak" |
+  "stla" |
+  "sum" |
+  "sums" |
+  "terraform" |
+  "text proto" |
+  "tl" |
+  "tm-properties" |
+  "topojson" |
+  "troff" |
+  "ts" |
+  "typ" |
+  "udiff" |
+  "unix asm" |
+  "vb .net" |
+  "vb 6" |
+  "vb.net" |
+  "vb6" |
+  "vbnet" |
+  "vdf" |
+  "velocity" |
+  "vim" |
+  "vimhelp" |
+  "viml" |
+  "visual basic" |
+  "visual basic 6" |
+  "visual basic classic" |
+  "visual basic for applications" |
+  "vlang" |
+  "vtl" |
+  "vtt" |
+  "wasm" |
+  "wast" |
+  "wgetrc" |
+  "wiki" |
+  "winbatch" |
+  "wisp" |
+  "wit" |
+  "wl" |
+  "wolfram" |
+  "wolfram lang" |
+  "wolfram language" |
+  "wrenlang" |
+  "wsdl" |
+  "xBase" |
+  "xbm" |
+  "xdc" |
+  "xdr" |
+  "xhtml" |
+  "xml+genshi" |
+  "xml+kid" |
+  "xpm" |
+  "xsd" |
+  "xsl" |
+  "xten" |
+  "yas" |
+  "yml" |
+  "zsh"
