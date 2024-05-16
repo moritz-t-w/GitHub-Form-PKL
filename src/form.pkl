@@ -5,6 +5,8 @@
 /// and contains a lot of the same documentation.
 module com.github.form
 
+import "linguist.pkl"
+
 /// Each type has unique attributes and validations.
 /// /// | Type | Description |
 /// | ---- | ----------- |
@@ -52,4 +54,27 @@ class MarkdownAttributes {
 class Markdown extends Element {
   type = "markdown"
   attributes: MarkdownAttributes
+}
+
+
+class TextAreaAttributes {
+  /// A brief description of the expected user input, which is also displayed in the form.
+  label: String(!isEmpty)
+  /// A description of the text area to provide context or guidance, which is displayed in the form.
+  description: String
+  ///  A semi-opaque placeholder that renders in the text area when empty.
+  placeholder: String
+  /// Text that is pre-filled in the text area.
+  value: String
+  /// If a value is provided, submitted text will be formatted into a codeblock.
+  /// When this [property] is provided, the text area will not expand for file attachments
+  /// or Markdown editing.
+  render: linguist.Language // should be imported from linguist.pkl
+}
+
+/// You can use a textarea element to add a multi-line text field to your form.
+/// Contributors can also attach files in textarea fields.
+class TextArea extends Input {
+  type = "textarea"
+  attributes: TextAreaAttributes
 }
