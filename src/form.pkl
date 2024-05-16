@@ -42,3 +42,14 @@ abstract class Input extends Element {
   /// If provided, the id is the canonical identifier for the field in URL query parameter prefills.
   id: String(matches(Regex("^[a-zA-Z0-9-_]+$")))
 }
+
+class MarkdownAttributes {
+  /// The text that is rendered. Markdown formatting is supported.
+  value: String(!isEmpty)
+}
+/// You can use a markdown element to display Markdown in your form that provides extra context
+/// to the user, but is not submitted.
+class Markdown extends Element {
+  type = "markdown"
+  attributes: MarkdownAttributes
+}
