@@ -56,13 +56,6 @@ class Markdown extends Element/*<MarkdownAttributes>*/ {
 }
 
 
-/// Text field
-abstract class Text extends Input {
-  type: "input" | "textarea"
-  attributes: TextAttributes
-  validations: TextValidations
-}
-
 abstract class TextAttributes {
   /// A brief description of the expected user input, which is also displayed in the form.
   label: String(!isEmpty)
@@ -73,10 +66,15 @@ abstract class TextAttributes {
   /// Text that is pre-filled in the text area.
   value: String
 }
-
 class TextValidations {
   /// Prevents form submission until element is completed. Only for public repositories.
   required: Boolean
+}
+/// Text field
+abstract class Text extends Input {
+  type: "input" | "textarea"
+  attributes: TextAttributes
+  validations: TextValidations
 }
 
 class MultiLineTextAttributes extends TextAttributes {
