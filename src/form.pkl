@@ -107,6 +107,7 @@ class DropDownAttributes extends InputAttributes {
   /// When a default option is specified, you cannot include "None" or "n/a" as options.
   default: UInt(isBetween(0, options.length)) | Null
 }
+/// Dropdown menu
 class DropDown extends Input {
   type = "dropdown"
   attributes: DropDownAttributes
