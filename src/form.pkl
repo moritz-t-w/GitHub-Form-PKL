@@ -96,3 +96,18 @@ class MultiLineText extends Text {
 class SingleLineText extends Text {
   type = "input"
 }
+
+class DropDownAttributes extends InputAttributes {
+  /// Determines if the user can select more than one option.
+  multiple: Boolean | Null
+  /// Options the user can choose from.
+  /// When a default option is specified, you cannot include "None" or "n/a" as options.
+  options: List<String>(!isEmpty && isDistinct && (default == Null || (!contains("n/a") && !contains("None"))))
+  /// Index of the preselected option in the options array.
+  /// When a default option is specified, you cannot include "None" or "n/a" as options.
+  default: UInt(isBetween(0, options.length)) | Null
+}
+class DropDown extends Input {
+  type = "dropdown"
+  attributes: DropDownAttributes
+}
