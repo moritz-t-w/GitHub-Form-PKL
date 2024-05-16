@@ -56,7 +56,14 @@ class Markdown extends Element/*<MarkdownAttributes>*/ {
 }
 
 
-class TextAreaAttributes {
+/// Text field
+abstract class Text extends Input {
+  type: "input" | "textarea"
+  attributes: TextAttributes
+  validations: TextValidations
+}
+
+abstract class TextAttributes {
   /// A brief description of the expected user input, which is also displayed in the form.
   label: String(!isEmpty)
   /// A description of the text area to provide context or guidance, which is displayed in the form.
@@ -65,19 +72,22 @@ class TextAreaAttributes {
   placeholder: String
   /// Text that is pre-filled in the text area.
   value: String
+}
+
+class TextValidations {
+  /// Prevents form submission until element is completed. Only for public repositories.
+  required: Boolean
+}
+
+class MultiLineTextAttributes extends TextAttributes {
   /// If a value is provided, submitted text will be formatted into a codeblock.
   /// When this [property] is provided, the text area will not expand for file attachments
   /// or Markdown editing.
   render: linguist.Language // should be imported from linguist.pkl
 }
 
-class TextAreaValidations {
-  /// Prevents form submission until element is completed. Only for public repositories.
-  required: Boolean
-}
-
 /// Multi-line text field. Contributors can also attach files [...].
+class MultiLineText extends Input {
   type = "textarea"
-  attributes: TextAreaAttributes
-  validations = TextAreaValidations
+  attributes: MultiLineTextAttributes
 }
