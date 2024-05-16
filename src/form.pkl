@@ -5,3 +5,32 @@
 /// and contains a lot of the same documentation.
 module com.github.form
 
+/// Each type has unique attributes and validations.
+/// /// | Type | Description |
+/// | ---- | ----------- |
+/// | `textarea` | A multi-line text field. |
+/// | `input` | A single-line text field. |
+/// | `dropdown` | A dropdown menu. |
+/// | `checkboxes` | A set of checkboxes. |
+typealias InputType = "textarea" |  "input" |  "dropdown" |  "checkboxes"
+
+/// Each type has unique attributes and validations.
+/// | Type | Description |
+/// | ---- | ----------- |
+/// | `markdown` | Markdown text that is displayed in the form to provide extra context to the user, but is **not submitted**. |
+/// | `textarea` | A multi-line text field. |
+/// | `input` | A single-line text field. |
+/// | `dropdown` | A dropdown menu. |
+/// | `checkboxes` | A set of checkboxes. |
+typealias ElementType = "markdown" | InputType
+/// A set of key-value pairs that determine the type of the element, the properties of the element,
+/// and the constraints you want to apply to the element.
+/// For some keys, the value is another set of key-value pairs.
+abstract class Element {
+  /// The type of element that you want to define.
+  type: ElementType
+  /// A set of key-value pairs that define the properties of the element.
+  attributes : Any
+  /// A set of key-value pairs that set constraints on the element.
+  validations: Map<String, String>
+}
