@@ -34,21 +34,21 @@ abstract class Element {
   /// A set of key-value pairs that define the properties of the element.
   attributes: Class
   /// A set of key-value pairs that set constraints on the element.
-  validations: Class
+  validations: Class | Null
 }
 
 open class InputAttributes {
   /// A brief description of the expected user input, which is also displayed in the form.
   label: String(!isEmpty)
   /// A description of the text area to provide context or guidance, which is displayed in the form.
-  description: String
+  description: String | Null
 }
 abstract class Input extends Element {
   type: InputType
   /// The identifier for the elemkent[...]. Can only use alpha-numeric characters, -, and _.
   /// Must be unique in the form definition.
   /// If provided, the id is the canonical identifier for the field in URL query parameter prefills.
-  id: String(matches(Regex("^[a-zA-Z0-9-_]+$")))
+  id: String(matches(Regex("^[a-zA-Z0-9-_]+$"))) | Null
   attributes: InputAttributes
 }
 
@@ -65,13 +65,13 @@ class Markdown extends Element/*<MarkdownAttributes>*/ {
 
 open class TextAttributes extends InputAttributes{
   ///  A semi-opaque placeholder that renders in the text [input] when empty.
-  placeholder: String
+  placeholder: String | Null
   /// Text that is pre-filled in the text area.
-  value: String
+  value: String | Null
 }
 class TextValidations {
   /// Prevents form submission until element is completed. Only for public repositories.
-  required: Boolean
+  required: Boolean | Null
 }
 /// Text field
 abstract class Text extends Input {
@@ -84,7 +84,7 @@ class MultiLineTextAttributes extends TextAttributes {
   /// If a value is provided, submitted text will be formatted into a codeblock.
   /// When this [property] is provided, the text area will not expand for file attachments
   /// or Markdown editing.
-  render: linguist.Language
+  render: linguist.Language | Null
 }
 /// Multi-line text field. Contributors can also attach files [...].
 class MultiLineText extends Text {
