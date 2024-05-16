@@ -85,7 +85,7 @@ class MultiLineTextAttributes extends TextAttributes {
 }
 
 /// Multi-line text field. Contributors can also attach files [...].
-class MultiLineText extends Input {
+class MultiLineText extends Text {
   type = "textarea"
   attributes: MultiLineTextAttributes
 }
