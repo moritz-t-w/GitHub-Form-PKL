@@ -86,7 +86,6 @@ class MultiLineTextAttributes extends TextAttributes {
   /// or Markdown editing.
   render: linguist.Language
 }
-
 /// Multi-line text field. Contributors can also attach files [...].
 class MultiLineText extends Text {
   type = "textarea"
