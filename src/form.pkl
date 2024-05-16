@@ -72,9 +72,15 @@ class TextAreaAttributes {
   render: linguist.Language // should be imported from linguist.pkl
 }
 
+class TextAreaValidations {
+  /// Prevents form submission until element is completed. Only for public repositories.
+  required: Boolean
+}
+
 /// You can use a textarea element to add a multi-line text field to your form.
 /// Contributors can also attach files in textarea fields.
 class TextArea extends Input {
   type = "textarea"
   attributes: TextAreaAttributes
+  validations = TextAreaValidations
 }
